@@ -123,7 +123,7 @@
       <cfif arguments.fils EQ 1>
         <cfset local.result.setMatrix(arguments.matrix) />
       </cfif>
-        
+      
       <cfreturn local.result />
     </cfif>
   </cffunction>

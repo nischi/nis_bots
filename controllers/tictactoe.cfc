@@ -5,11 +5,12 @@
   
   <cffunction name="get" access="public" returntype="void" hint="Get request for tic tac toe bot">
     <cfset local.data = {
-            'Name'        = 'Nischi Bot',
+            'Name'        = 'Nischi Bot v2',
             'Description' = 'The ultimate Tic Tac Toe Bot',
-            'Version'     = 1,
+            'Version'     = 2,
             'Active'      = true
            } />
+    <cfset local.data = getTicTacToeService().getMove(['1','0','1',' ',' ',' ',' ',' ',' ',' ']) />
     
     <cfset getFramework().renderData('json',local.data) />
   </cffunction>
