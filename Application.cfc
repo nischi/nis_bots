@@ -1,8 +1,7 @@
-<cfcomponent hint="bots for ai games" extends="framework.one" output="false">
+<cfcomponent hint="bots for ai games" extends="framework.one">
   <cfset variables.framework = getFrameworkConfig() />
   
-  <cffunction name="getFrameworkConfig" access="private" returntype="struct" hint="Get the configuration of the Framework">
-    
+  <cffunction name="getFrameworkConfig" access="private" returntype="struct" hint="Get the configuration of the Framework">    
     <cfset local.config = {
       reloadApplicationOnEveryRequest = true,
       routes = [

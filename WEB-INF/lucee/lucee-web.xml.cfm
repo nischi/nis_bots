@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><cfLuceeConfiguration salt="9B27F95C-0E2D-47F2-9522EFABCF126F9A" version="4.5">
+<?xml version="1.0" encoding="UTF-8"?><cfLuceeConfiguration hspw="34d5c2e01c3eaa57c24ec018638db3ac71d6c97fbc98ec0942efe2ef275f6d1f" salt="9B27F95C-0E2D-47F2-9522EFABCF126F9A" version="4.5"><cfabort/>
 
 <!-- 
 Path placeholders:
@@ -21,7 +21,7 @@ Path placeholders:
 		suppress-whitespace	-	supress white space in response
 		show-version - show lucee version uin response header
 	 -->
-	<setting/>
+	<setting allow-compression="true" buffer-output="true" cfml-writer="white-space-pref" content-length="" suppress-content="false"/>
 
 <!--	definition of all database used inside your application. 										-->
 <!--	above you can find some definition of jdbc drivers (all this drivers are included at lucee) 	-->
@@ -143,7 +143,7 @@ Path placeholders:
 		timeserver: [example: swisstime.ethz.ch] default:local time
 			dns of a ntp time server
 	-->
-	<regional/>
+	<regional locale="de_CH" timeserver="pool.ntp.org" timezone="Europe/Zurich" use-timeserver="true"/>
 	
 	<!--
 		enable and disable debugging
