@@ -12,4 +12,17 @@
     
     <cfset getFramework().renderData('json',local.data) />
   </cffunction>
+  
+  
+  <cffunction name="post" access="public" returntype="void" hint="Post request for tic tac toe bot">
+    <cfset local.x = 1 />
+    <cfset local.y = 2 />
+    
+    <cfset local.data = {
+            'X' = local.x,
+            'Y' = local.y,
+           } />
+    
+    <cfset getFramework().renderData('json',local.data) />
+  </cffunction>
 </cfcomponent>
