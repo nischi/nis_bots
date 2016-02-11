@@ -1,0 +1,47 @@
+"Severity","ThreadID","Date","Time","Application","Message"
+"ERROR","http-nio-80-exec-10","02/11/2016","18:28:24","",";Invalid Identifier, the following character cannot be part of a identifier [""];Invalid Identifier, the following character cannot be part of a identifier [""]
+	at lucee.transformer.cfml.tag.CFMLTransformer.identifier(CFMLTransformer.java:1126):1126
+	at lucee.transformer.cfml.tag.CFMLTransformer.attributeName(CFMLTransformer.java:1014):1014
+	at lucee.transformer.cfml.tag.CFMLTransformer.attribute(CFMLTransformer.java:960):960
+	at lucee.transformer.cfml.tag.CFMLTransformer.attributes(CFMLTransformer.java:839):839
+	at lucee.transformer.cfml.tag.CFMLTransformer.tag(CFMLTransformer.java:560):560
+	at lucee.transformer.cfml.tag.CFMLTransformer.body(CFMLTransformer.java:331):331
+	at lucee.transformer.cfml.tag.CFMLTransformer.transform(CFMLTransformer.java:271):271
+	at lucee.transformer.cfml.tag.CFMLTransformer.transform(CFMLTransformer.java:142):142
+	at lucee.runtime.compiler.CFMLCompilerImpl.compile(CFMLCompilerImpl.java:78):78
+	at lucee.runtime.PageSourceImpl._compile(PageSourceImpl.java:335):335
+	at lucee.runtime.PageSourceImpl.compile(PageSourceImpl.java:304):304
+	at lucee.runtime.PageSourceImpl.loadPhysical(PageSourceImpl.java:242):242
+	at lucee.runtime.PageSourceImpl.loadPage(PageSourceImpl.java:176):176
+	at lucee.runtime.component.ComponentLoader.loadComponent(ComponentLoader.java:456):456
+	at lucee.runtime.component.ComponentLoader.loadComponent(ComponentLoader.java:388):388
+	at lucee.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:110):110
+	at lucee.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:35):35
+	at lucee.runtime.PageContextImpl.execute(PageContextImpl.java:2262):2262
+	at lucee.runtime.PageContextImpl.execute(PageContextImpl.java:2225):2225
+	at lucee.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:456):456
+	at lucee.loader.servlet.CFMLServlet.service(CFMLServlet.java:47):47
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725):725
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291):291
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206):206
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52):52
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239):239
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206):206
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219):219
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106):106
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501):501
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142):142
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79):79
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610):610
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88):88
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:537):537
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1085):1085
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658):658
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222):222
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1556):1556
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1513):1513
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145):1145
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615):615
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61):61
+	at java.lang.Thread.run(Thread.java:745):745
+"
