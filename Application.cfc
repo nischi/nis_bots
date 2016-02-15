@@ -3,7 +3,13 @@
   
   <cffunction name="getFrameworkConfig" access="private" returntype="struct" hint="Get the configuration of the Framework">    
     <cfset local.config = {
-      reloadApplicationOnEveryRequest = true,
+      reloadApplicationOnEveryRequest = false,
+      diEngine = 'aop1',
+      diConfig = {
+        interceptors = [
+          <!--- { beanName="tictactoe", interceptorName="logInterceptor" } --->
+        ]
+      },
       routes = [
         { "$GET/bot/tictactoe" = "/tictactoe/get" },
         { "$POST/bot/tictactoe" = "/tictactoe/post" }

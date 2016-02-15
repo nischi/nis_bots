@@ -6,9 +6,10 @@
     <cfargument name="matrix" type="array" required="true" hint="Matrix" />
     
     <cfset local.result = minmax(arguments.matrix,"MAX",0,0) />
+    <cflog text="INDEX: #local.result.getIntrus()#" file="tictactoe" />
     <cfreturn {
-      'X' = local.result.getIntrus() % 3,
-      'Y' = fix(local.result.getIntrus() / 3)
+      'Y' = (local.result.getIntrus() - 1) % 3,
+      'X' = fix((local.result.getIntrus() - 1) / 3)
     } />
   </cffunction>
   
