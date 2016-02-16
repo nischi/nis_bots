@@ -8,8 +8,8 @@
     <cfset local.result = minmax(arguments.matrix,"MAX",0,0) />
     <cflog text="INDEX: #local.result.getIntrus()#" file="tictactoe" />
     <cfreturn {
-      'Y' = (local.result.getIntrus() - 1) % 3,
-      'X' = fix((local.result.getIntrus() - 1) / 3)
+      'C' = (local.result.getIntrus() - 1) % 3,
+      'R' = fix((local.result.getIntrus() - 1) / 3)
     } />
   </cffunction>
   
@@ -100,6 +100,13 @@
     <cfreturn local.result />
   </cffunction>
   
+		
+	<cffunction name="gameOver" access="public" returntype="any" hint="Game over">
+    <cfargument name="matrix" type="array"    required="true" hint="Matrix" />
+		
+		<cfreturn NOT getScore(arguments.matrix) EQ 0 />
+	</cffunction>
+		
   
   <cffunction name="minmax" access="public" returntype="any" hint="Calculcate min max">
     <cfargument name="matrix" type="array"    required="true" hint="Matrix" />
@@ -108,7 +115,7 @@
     <cfargument name="depth"  type="numeric"  required="true" hint="Depth" />
     
     <cfset local.children = generateSuccessor(arguments.matrix,arguments.level) />
-    <cfif isNull(local.children) OR arrayIsEmpty(local.children)>
+    <cfif isNull(local.children) OR gameOver(arguments.matrix)>
       <cfset local.bean = getFramework().getBeanFactory().getBean('minmax') />
       <cfset local.bean.setMatrix(arguments.matrix) />
       <cfset local.bean.setScore(getScore(arguments.matrix)) />

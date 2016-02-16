@@ -20,7 +20,7 @@
   <cffunction name="post" access="public" returntype="void" hint="Post request for tic tac toe bot">
     <cflog text="POST: #serializeJSON(rc)#" file="tictactoe" />
     
-    <cfset local.data = { 'X'=1,'Y'=1 } />
+    <cfset local.data = { 'R'=1,'C'=1 } />
     <cfif structKeyExists(rc,'gameState')>
       <cfset local.gameState  = deserializeJSON(rc.gameState) />
       <cfset local.board      = local.gameState.board />
